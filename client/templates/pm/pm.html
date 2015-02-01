@@ -1,0 +1,14 @@
+<template name="pm">
+	<div class="container">
+		<!-- Will be able to add all more information directly to each user by building. Like specs about the unit location etc-->
+			<h3>Hey Property Manager! Here is a list of recent inquiries</h3>
+		{{#each issue}}
+			<p><strong>Tenant:</strong> {{author}}</p>
+			<p>Description: {{specifications}}</p>
+			<p>Urgency: {{urgency}}</p>
+			<p>Time submitted: {{time}}</p>
+			<br>
+		{{/each}}
+			<p><a href="{{pathFor 'issue'}}">Return</a></p>
+	</div>
+</template>

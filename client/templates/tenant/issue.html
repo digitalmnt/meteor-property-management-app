@@ -1,0 +1,36 @@
+<template name="issue">
+	<div class="container">
+		<div class="jumbotron">
+			{{#if isInRole 'admin'}}<h1><a href="{{pathFor 'pm'}}">PMs click here</a></h1>{{/if}}
+			<h2>Welcome. Please take a picture of what is wrong with your apartment and fill in the required fields</h2>
+			<form role="form">
+				<div class="specifications {{errorClass 'specifications'}}">
+					<label class="control-label" for="specifications">Please tell us a little more about what is wrong with your unit</label>
+					<div class="controls">
+						<input class="form-control" name="specifications" type="text" value="" placeholder="Specifications"/>
+						<span class="help-block">{{errorMessage 'specifications'}}</span>
+					</div>
+				</div>
+				<div class="specifications {{errorClass 'urgency'}}">
+					<label class="control-label" for="urgency">How urgent is this issue?</label>
+					<div class="controls">
+						<input class="form-control" name="urgency" type="text" value="" placeholder="Urgency"/>
+						<span class="help-block">{{errorMessage 'urgency'}}</span>
+					</div>
+				</div>
+				<div class="col-lg-6 col-sm-6 col-12">
+					<h4>Please select an image that displays what is wrong with your unit</h4>
+					<span class="file-input btn btn-block btn-primary btn-file">
+						Browse&hellip;<input class="fileUploader" id="image" name="upload" type="file">
+					</span>
+				</div>
+				<div class="control-group">
+					<div class="controls">
+						<input type="submit" value="Submit" class="submitButton btn btn-lg btn-success" id="image"/>
+					</div>
+				</div>
+			</form>
+			<p><a href="" id="logout">Logout</a></p>
+		</div>
+	</div>
+</template>
