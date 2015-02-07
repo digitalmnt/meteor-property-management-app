@@ -27,4 +27,6 @@ Template.pm.helpers({
 		var time = monthLiteral + " " + day + ending;
 		return time;
 	}
-})
+
+});
+

@@ -1,0 +1,9 @@
+{
+	"apn": {
+		"passphrase": "WillaRita2625",
+		"key": "/EduardoAppKey.pem",
+		"cert": "/EduardoAppCert.pem"
+	},
+	"production": false,
+	"development": true
+}
